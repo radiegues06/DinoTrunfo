@@ -13,64 +13,61 @@ public class Card {
 	private int yearsAgo;
 	private boolean superTrunfo;
 	
+	public Card(String line) {
+		
+		String[] data = line.split(",");
+		
+		name = data[0];
+		number = Integer.parseInt(data[1]);
+		letter = data[2];
+		eatingStrategy = data[3];
+		period = data[4];
+		height = Float.parseFloat(data[5]);
+		length = Float.parseFloat(data[6]);
+		weight = Float.parseFloat(data[7]);
+		yearsAgo = Integer.parseInt(data[8]);
+		superTrunfo = data[9].equals("1")? true :false;
+		
+	}
+	
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	public int getNumber() {
 		return number;
 	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
+
 	public String getLetter() {
 		return letter;
 	}
-	public void setLetter(String letter) {
-		this.letter = letter;
-	}
+
 	public String getEatingStrategy() {
 		return eatingStrategy;
 	}
-	public void setEatingStrategy(String eatingStrategy) {
-		this.eatingStrategy = eatingStrategy;
-	}
+
 	public String getPeriod() {
 		return period;
 	}
-	public void setPeriod(String period) {
-		this.period = period;
-	}
+	
 	public float getHeight() {
 		return height;
 	}
-	public void setHeight(float height) {
-		this.height = height;
-	}
+	
 	public float getLength() {
 		return length;
 	}
-	public void setLength(float length) {
-		this.length = length;
-	}
+	
 	public float getWeight() {
 		return weight;
 	}
-	public void setWeight(float weight) {
-		this.weight = weight;
-	}
+	
 	public int getYearsAgo() {
 		return yearsAgo;
 	}
-	public void setYearsAgo(int yearsAgo) {
-		this.yearsAgo = yearsAgo;
-	}
+	
 	public boolean isSuperTrunfo() {
 		return superTrunfo;
 	}
-	public void setSuperTrunfo(boolean superTrunfo) {
-		this.superTrunfo = superTrunfo;
-	}
+	
 }
